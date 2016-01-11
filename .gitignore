@@ -1,0 +1,9 @@
+*.pyc
+imgs/
+new_image/
+result/
+temp/
+*.jpg
+*.txt
+*~
+
