@@ -9,8 +9,8 @@ from os import listdir
 from os.path import isfile, join, exists
 
 # caffe_root = '../caffe-master/'
-MODEL_FILE = 'lenet.prototxt'
-PRETRAINED = 'code.caffemodel'
+MODEL_FILE = 'lenet_train_test.prototxt'
+PRETRAINED = 'code_iter_9100.caffemodel'
 
 class_list = '0123456789abcdefghijklmnopqrstuvwxyz'
 
@@ -49,6 +49,8 @@ for x in filelist:
                 char_error += 1
         num += 1
         print x + ' ' + res + ' ' + str(i) + ' ' + str(num)
+        # if num > 10:
+        #     break
 print float(num) / all_num
 print 'char error: ' + str(float(char_error) / char_num)
 # print predict('lea3r_2015123019521195222.jpg')

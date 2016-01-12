@@ -2,7 +2,7 @@ name: "LeNet"
 input: "data"
 input_shape {
   dim: 1
-  dim: 3
+  dim: 1
   dim: 24
   dim: 24
 }
@@ -128,3 +128,4 @@ layer {
   bottom: "ip2"
   top: "prob"
 }
+
