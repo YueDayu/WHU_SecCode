@@ -10,7 +10,7 @@ from os.path import isfile, join, exists
 
 # caffe_root = '../caffe-master/'
 MODEL_FILE = 'lenet_train_test.prototxt'
-PRETRAINED = 'code_iter_9100.caffemodel'
+PRETRAINED = 'best_10.caffemodel'
 
 class_list = '0123456789abcdefghijklmnopqrstuvwxyz'
 
@@ -53,4 +53,7 @@ for x in filelist:
         #     break
 print float(num) / all_num
 print 'char error: ' + str(float(char_error) / char_num)
+
+# print predict(sys.argv[1])
+
 # print predict('lea3r_2015123019521195222.jpg')

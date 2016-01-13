@@ -30,9 +30,32 @@ layer {
   }
 }
 layer {
+  name: "conv11"
+  type: "Convolution"
+  bottom: "conv1"
+  top: "conv11"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 20
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
   name: "pool1"
   type: "Pooling"
-  bottom: "conv1"
+  bottom: "conv11"
   top: "pool1"
   pooling_param {
     pool: MAX
@@ -162,4 +185,5 @@ layer {
   bottom: "ip2"
   top: "prob"
 }
+
 
